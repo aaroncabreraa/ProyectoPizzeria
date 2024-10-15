@@ -15,7 +15,7 @@ import static javax.swing.BorderFactory.createTitledBorder;
 public class frm_Admin extends javax.swing.JFrame {
     String user, nombre_usuario;
     public static int session_usuario;//enviar datos entre interfaces
-    FondoPanel fondo = new FondoPanel();
+    /*FondoPanel fondo = new FondoPanel();*/
     public frm_Admin() {
         initComponents();
         user = frm_Login.user;
@@ -25,7 +25,7 @@ public class frm_Admin extends javax.swing.JFrame {
         setTitle("Administrador - Sesión " + user);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);//al ser cerrada el programa dejara de ejecutarla(evita que se ejecute en segundo plano)
-        setContentPane(fondo);
+        /*setContentPane(fondo);*/
     }
     //cambiar la imagen del logo de la taza 
     //Inicio
@@ -364,7 +364,7 @@ public class frm_Admin extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 
-    class FondoPanel extends JPanel
+    /* class FondoPanel extends JPanel
     {
         private Image imagen;
         
@@ -381,7 +381,7 @@ public class frm_Admin extends javax.swing.JFrame {
         }
     }
     
-    /*class FondoPanel extends JPanel{
+    class FondoPanel extends JPanel{
         private Image imagen;
         
         public FondoPanel(){
