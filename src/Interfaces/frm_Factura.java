@@ -463,9 +463,9 @@ public class frm_Factura extends javax.swing.JFrame {
                     try {
 
                         String ruta = System.getProperty("user.home");
-                        PdfWriter.getInstance(doc, new FileOutputStream(ruta + "/Desktop/Factura"+factura.getNombre()+".pdf"));
-                        Image header = Image.getInstance("src/imagenes/CabeceraF.jpg");
-                        header.scaleToFit(650, 1000);//1000 iba mil
+                        PdfWriter.getInstance(doc, new FileOutputStream(ruta + "/ProyectoPizzeria/fact&tickets"+factura.getNombre()+".pdf"));
+                        Image header = Image.getInstance("src/imagenes/atilatinos.jpeg");
+                        header.scaleToFit(650, 100);//1000 iba mil
                         header.setAlignment(Chunk.ALIGN_CENTER);
 
                         Paragraph parrafo = new Paragraph();
@@ -508,7 +508,7 @@ public class frm_Factura extends javax.swing.JFrame {
                         parrafo1.setAlignment(Paragraph.ALIGN_RIGHT);
                         parrafo1.setFont(FontFactory.getFont("Tahoma", 14, Font.BOLD, BaseColor.DARK_GRAY));
                         parrafo1.add("SubTotal: " + factura.getSubtotal() + "\n \n");
-                        parrafo1.add("IGV 18%: " + factura.getIgv() + " \n \n");
+                        parrafo1.add("IVA 18%: " + factura.getIgv() + " \n \n");
                         parrafo1.add("Total: " + factura.getMontoTotal() + "\n \n");
 
                         doc.add(tabla);

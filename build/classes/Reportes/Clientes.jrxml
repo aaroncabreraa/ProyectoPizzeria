@@ -38,7 +38,7 @@ FROM
 			</textField>
 			<image>
 				<reportElement x="11" y="0" width="89" height="69" uuid="cb0e7bdc-b69a-42bf-b38b-20767c19a92f"/>
-				<imageExpression><![CDATA["C:\\Users\\Frank\\Documents\\NetBeansProjects\\TooQTooQ\\src\\imagenes\\logoTOOQTOOQ.png"]]></imageExpression>
+				<imageExpression><![CDATA[""]]></imageExpression>
 			</image>
 		</band>
 	</title>

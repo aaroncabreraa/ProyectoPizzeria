@@ -87,7 +87,7 @@ public class frm_AdministradorOpciones extends javax.swing.JFrame {
             Connection conn = con.Conectar();
 
             JasperReport reporte = null;
-            String path = "src\\reportes\\Administradores.jasper";
+            String path = "src/Reportes/Administradores.jasper";
 
             /*reporte = (JasperReport) JRLoader.loadObjectFromFile(path);*/
             reporte = (JasperReport) JRLoader.loadObject(path);

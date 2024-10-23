@@ -85,7 +85,7 @@ public class frm_EmpleadosBuscDesc extends javax.swing.JFrame {
             Connection conn = con.Conectar();
 
             JasperReport reporte = null;
-            String path = "src\\reportes\\Meseros.jasper";
+            String path = "src/Reportes/Meseros.jasper";
 
             /*reporte = (JasperReport) JRLoader.loadObjectFromFile(path);*/
             reporte = (JasperReport) JRLoader.loadObject(path);

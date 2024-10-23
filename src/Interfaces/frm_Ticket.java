@@ -467,8 +467,8 @@ public class frm_Ticket extends javax.swing.JFrame {
                     try {
 
                         String ruta = System.getProperty("user.home");
-                        PdfWriter.getInstance(doc, new FileOutputStream(ruta + "/Desktop/Boleta"+boleta.getNombre()+".pdf"));
-                        Image header = Image.getInstance("src/imagenes/CabeceraB.jpg");
+                        PdfWriter.getInstance(doc, new FileOutputStream(ruta + "/ProyectoPizzeria/fact&tickets"+boleta.getNombre()+".pdf"));
+                        Image header = Image.getInstance("src/imagenes/atilatinos.jpeg");
                         header.scaleToFit(650, 1000);//1000 iba mil
                         header.setAlignment(Chunk.ALIGN_CENTER);
 
@@ -511,14 +511,14 @@ public class frm_Ticket extends javax.swing.JFrame {
                         parrafo1.setAlignment(Paragraph.ALIGN_RIGHT);
                         parrafo1.setFont(FontFactory.getFont("Tahoma", 14, Font.BOLD, BaseColor.DARK_GRAY));
                         parrafo1.add("SubTotal: " + boleta.getSubtotal() + "\n \n");
-                        parrafo1.add("IGV 18%: " + boleta.getIgv() + " \n \n");
+                        parrafo1.add("IVA 18%: " + boleta.getIgv() + " \n \n");
                         parrafo1.add("Total: " + boleta.getMontoTotal() + "\n \n");
 
                         doc.add(tabla);
                         doc.add(parrafo1);
 
                         doc.close();
-                        JOptionPane.showMessageDialog(null, "BOLETA DESCARGADA EN INICIO ");
+                        JOptionPane.showMessageDialog(null, "TICKET DESCARGADA EN LA CARPETA FACT&TICKETS");
                         this.dispose();
                     } catch (DocumentException | IOException e) {
                         System.out.println("error" + e);

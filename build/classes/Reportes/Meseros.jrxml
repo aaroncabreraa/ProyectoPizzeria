@@ -42,7 +42,7 @@ FROM
 		<band height="4" splitType="Stretch">
 			<image>
 				<reportElement x="29" y="-80" width="92" height="80" uuid="36dbf537-78b2-48da-b5e7-85e4c4c04ba3"/>
-				<imageExpression><![CDATA["C:\\Users\\Frank\\Documents\\NetBeansProjects\\TooQTooQ\\src\\imagenes\\logoTOOQTOOQ.png"]]></imageExpression>
+				<imageExpression><![CDATA[""]]></imageExpression>
 			</image>
 		</band>
 	</pageHeader>

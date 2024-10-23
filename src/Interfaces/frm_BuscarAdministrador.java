@@ -29,8 +29,8 @@ public class frm_BuscarAdministrador extends javax.swing.JFrame {
         initComponents();
         setTitle("Buscar Administradores");
         setSize(797,333);//mantener el tamaño de la interfaz para que no se pueda editar
-        setResizable(false);//para que no se pueda editar 
-        setResizable(false);
+        setResizable(true);//para que no se pueda editar 
+        setResizable(true);
         setLocationRelativeTo(null);//centrar la interfaz para cuando se ejecute
         //para evitar que el programa finalice al cerrar la interfaz de registro de usuario
         setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
