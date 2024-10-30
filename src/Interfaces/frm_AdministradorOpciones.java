@@ -6,12 +6,14 @@
 package Interfaces;
 
 import Conector.conexion;
+import java.io.InputStream;
 import java.sql.Connection;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.WindowConstants;
 import static javax.swing.WindowConstants.DISPOSE_ON_CLOSE;
 import net.sf.jasperreports.engine.JRException;
+import net.sf.jasperreports.engine.JasperCompileManager;
 import net.sf.jasperreports.engine.JasperFillManager;
 import net.sf.jasperreports.engine.JasperPrint;
 import net.sf.jasperreports.engine.JasperReport;
@@ -88,13 +90,14 @@ public class frm_AdministradorOpciones extends javax.swing.JFrame {
 
             JasperReport reporte = null;
             String path = "src/Reportes/Administradores.jasper";
-
-            /*reporte = (JasperReport) JRLoader.loadObjectFromFile(path);*/
-            reporte = (JasperReport) JRLoader.loadObject(path);
+            reporte = (JasperReport) JRLoader.loadObjectFromFile(path); //forma obsoleta
+            //InputStream jasperStream = Thread.currentThread().getContextClassLoader().getResourceAsStream("src/Reportes/Administradores.jrxml");
+            //JasperReport reporte = JasperCompileManager.compileReport("src/Reportes/Administradores.jasper"); 
+            //reporte = (JasperReport) JRLoader.loadObject(path);
             //llenado del reporte 
             JasperPrint jprint = JasperFillManager.fillReport(reporte, null, conn);
             //vista del reporte
-            JasperViewer view = new JasperViewer(jprint, false);
+            JasperViewer view = new JasperViewer(jprint);
             //para que se cierrecuando se preciona el boton X
             view.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
             view.setVisible(true);

@@ -1,113 +1,76 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="79f7cb90-15b3-45d8-90ac-a12535f201e9">
+<?xml version="1.0" encoding="utf-8"?>
+<jasperReport name="report name" language="java" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c00a2dd6-fa8b-4ddb-9f22-182b34f4d7d9">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
-	<queryString>
-		<![CDATA[SELECT
+	<query language="sql"><![CDATA[SELECT
      administrador.`nombre` AS administrador_nombre,
      administrador.`telefono` AS administrador_telefono,
      administrador.`mail` AS administrador_mail,
      administrador.`contraseña` AS administrador_contraseña,
      administrador.`username` AS administrador_username
 FROM
-     `administrador` administrador]]>
-	</queryString>
+     `administrador` administrador]]></query>
 	<field name="administrador_nombre" class="java.lang.String"/>
 	<field name="administrador_telefono" class="java.lang.String"/>
 	<field name="administrador_mail" class="java.lang.String"/>
 	<field name="administrador_contraseña" class="java.lang.String"/>
 	<field name="administrador_username" class="java.lang.String"/>
-	<background>
-		<band splitType="Stretch"/>
-	</background>
-	<title>
-		<band height="79" splitType="Stretch">
-			<staticText>
-				<reportElement x="167" y="0" width="186" height="43" uuid="d9fbf072-2b0d-4361-b0b6-6f4fde110337"/>
-				<textElement>
-					<font size="22"/>
-				</textElement>
-				<text><![CDATA[Administrador(es)]]></text>
-			</staticText>
-			<textField pattern="EEEEE dd MMMMM yyyy">
-				<reportElement x="432" y="12" width="100" height="20" uuid="04b680e4-d9ba-4401-9e4e-c0a1ff11bce8"/>
-				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
-			</textField>
-			<image>
-				<reportElement x="23" y="0" width="110" height="67" uuid="5bbfc853-5ac0-41de-ae20-a246f2d094f4"/>
-				<imageExpression><![CDATA[""]]></imageExpression>
-			</image>
-		</band>
+	<background splitType="Stretch"/>
+	<title height="79" splitType="Stretch">
+		<element kind="staticText" uuid="5304823c-632f-4567-8aa8-73825cc72b25" x="167" y="0" width="186" height="43" fontSize="22.0">
+			<text><![CDATA[Administrador(es)]]></text>
+		</element>
+		<element kind="textField" uuid="99910d9a-e434-42e9-adb3-7535ae312151" x="432" y="12" width="100" height="20" pattern="EEEEE dd MMMMM yyyy">
+			<expression><![CDATA[new java.util.Date()]]></expression>
+		</element>
+		<element kind="image" uuid="29c32e4a-a903-43b6-a492-c27022e01ecf" x="23" y="0" width="110" height="67"/>
 	</title>
-	<pageHeader>
-		<band height="4" splitType="Stretch"/>
-	</pageHeader>
-	<columnHeader>
-		<band height="20" splitType="Stretch">
-			<staticText>
-				<reportElement x="0" y="0" width="100" height="20" uuid="f97b6601-dd3e-4da1-9a8e-eae5cdf2d3c6"/>
-				<text><![CDATA[Nombre]]></text>
-			</staticText>
-			<staticText>
-				<reportElement x="120" y="0" width="100" height="20" uuid="e1826f54-b66d-4d35-b45d-d525424d4266"/>
-				<text><![CDATA[Telefono]]></text>
-			</staticText>
-			<staticText>
-				<reportElement x="238" y="0" width="81" height="20" uuid="63bf6f7a-78b5-4c3c-a589-865bfccfab2a"/>
-				<text><![CDATA[E-mail]]></text>
-			</staticText>
-			<staticText>
-				<reportElement x="342" y="0" width="90" height="20" uuid="b48b5d7b-07a0-458c-86ed-589b1fe3a0f6"/>
-				<text><![CDATA[Contraseña]]></text>
-			</staticText>
-			<staticText>
-				<reportElement x="455" y="0" width="100" height="20" uuid="e0980db2-7ea6-45f8-a710-489173a930aa"/>
-				<text><![CDATA[Username]]></text>
-			</staticText>
-		</band>
+	<pageHeader height="4" splitType="Stretch"/>
+	<columnHeader height="20" splitType="Stretch">
+		<element kind="staticText" uuid="fcb6b8d0-81bd-4b97-a32f-836b709b4488" x="0" y="0" width="100" height="20">
+			<text><![CDATA[Nombre]]></text>
+		</element>
+		<element kind="staticText" uuid="d6dce862-9a85-46c5-9663-18b9cbd8ad1e" x="120" y="0" width="100" height="20">
+			<text><![CDATA[Telefono]]></text>
+		</element>
+		<element kind="staticText" uuid="a6725fa2-905d-4b00-a6e2-4ad4ef69ef97" x="238" y="0" width="81" height="20">
+			<text><![CDATA[E-mail]]></text>
+		</element>
+		<element kind="staticText" uuid="ce092222-73f2-408b-b154-738170f158b9" x="342" y="0" width="90" height="20">
+			<text><![CDATA[Contraseña]]></text>
+		</element>
+		<element kind="staticText" uuid="06cb85d0-bc78-4355-b029-0c55ac369787" x="455" y="0" width="100" height="20">
+			<text><![CDATA[Username]]></text>
+		</element>
 	</columnHeader>
 	<detail>
 		<band height="21" splitType="Stretch">
-			<textField>
-				<reportElement x="0" y="0" width="100" height="20" uuid="dc39b6c2-efd4-4936-ae6e-0329f37216f4"/>
-				<textFieldExpression><![CDATA[$F{administrador_nombre}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement x="120" y="0" width="80" height="20" uuid="cab2d6ac-ccb1-49fb-a45e-bf573559260d"/>
-				<textFieldExpression><![CDATA[$F{administrador_telefono}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement x="238" y="0" width="81" height="20" uuid="801436da-ddbb-4ca4-8c94-0de417e72a7b"/>
-				<textFieldExpression><![CDATA[$F{administrador_mail}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement x="342" y="0" width="90" height="20" uuid="a4ee43c6-4b67-430f-8e51-7299ddb250a6"/>
-				<textFieldExpression><![CDATA[$F{administrador_contraseña}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement x="455" y="0" width="100" height="20" uuid="0f5fb2e6-1803-4e6b-b200-42dbba73ce25"/>
-				<textFieldExpression><![CDATA[$F{administrador_username}]]></textFieldExpression>
-			</textField>
+			<element kind="textField" uuid="dc2460cf-ac19-47ef-8e58-433a1637d46c" x="0" y="0" width="100" height="20">
+				<expression><![CDATA[$F{administrador_nombre}]]></expression>
+			</element>
+			<element kind="textField" uuid="d82fe35a-4257-4fa3-a0ad-56ab4ca00794" x="120" y="0" width="80" height="20">
+				<expression><![CDATA[$F{administrador_telefono}]]></expression>
+			</element>
+			<element kind="textField" uuid="6f473896-b6e4-4093-bbd2-501549d8f408" x="238" y="0" width="81" height="20">
+				<expression><![CDATA[$F{administrador_mail}]]></expression>
+			</element>
+			<element kind="textField" uuid="f9de2cb9-2dc9-4d47-a977-a5f4e19c13d8" x="342" y="0" width="90" height="20">
+				<expression><![CDATA[$F{administrador_contraseña}]]></expression>
+			</element>
+			<element kind="textField" uuid="05ef29ce-910c-496a-ba66-5046dc3e151d" x="455" y="0" width="100" height="20">
+				<expression><![CDATA[$F{administrador_username}]]></expression>
+			</element>
 		</band>
 	</detail>
-	<columnFooter>
-		<band splitType="Stretch"/>
-	</columnFooter>
-	<pageFooter>
-		<band height="24" splitType="Stretch">
-			<textField>
-				<reportElement x="199" y="0" width="80" height="20" uuid="034b10f7-211a-48c8-9535-0e97b22b37e0"/>
-				<textElement textAlignment="Right"/>
-				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
-			</textField>
-			<textField evaluationTime="Report">
-				<reportElement x="279" y="0" width="40" height="20" uuid="dc212d83-ea6c-4e4f-8ff7-69b1d81b224e"/>
-				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
-			</textField>
-		</band>
+	<columnFooter splitType="Stretch"/>
+	<pageFooter height="24" splitType="Stretch">
+		<element kind="textField" uuid="14bf382d-789b-4ddf-9c8d-05029435c71b" x="199" y="0" width="80" height="20" hTextAlign="Right">
+			<expression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></expression>
+		</element>
+		<element kind="textField" uuid="e7411302-b698-439b-a247-601b83ca10f0" x="279" y="0" width="40" height="20" evaluationTime="Report">
+			<expression><![CDATA[" " + $V{PAGE_NUMBER}]]></expression>
+		</element>
 	</pageFooter>
-	<summary>
-		<band height="3" splitType="Stretch"/>
-	</summary>
+	<summary height="3" splitType="Stretch"/>
 </jasperReport>

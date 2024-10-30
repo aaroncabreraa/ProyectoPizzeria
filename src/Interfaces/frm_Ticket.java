@@ -467,9 +467,9 @@ public class frm_Ticket extends javax.swing.JFrame {
                     try {
 
                         String ruta = System.getProperty("user.home");
-                        PdfWriter.getInstance(doc, new FileOutputStream(ruta + "/ProyectoPizzeria/fact&tickets"+boleta.getNombre()+".pdf"));
+                        PdfWriter.getInstance(doc, new FileOutputStream(ruta + "/ProyectoPizzeria/ticket"+boleta.getNombre()+".pdf"));
                         Image header = Image.getInstance("src/imagenes/atilatinos.jpeg");
-                        header.scaleToFit(650, 1000);//1000 iba mil
+                        header.scaleToFit(650, 100);//1000 iba mil
                         header.setAlignment(Chunk.ALIGN_CENTER);
 
                         Paragraph parrafo = new Paragraph();

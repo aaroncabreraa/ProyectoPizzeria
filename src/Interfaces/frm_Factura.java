@@ -463,7 +463,7 @@ public class frm_Factura extends javax.swing.JFrame {
                     try {
 
                         String ruta = System.getProperty("user.home");
-                        PdfWriter.getInstance(doc, new FileOutputStream(ruta + "/ProyectoPizzeria/fact&tickets"+factura.getNombre()+".pdf"));
+                        PdfWriter.getInstance(doc, new FileOutputStream(ruta + "/ProyectoPizzeria/factura"+factura.getNombre()+".pdf"));
                         Image header = Image.getInstance("src/imagenes/atilatinos.jpeg");
                         header.scaleToFit(650, 100);//1000 iba mil
                         header.setAlignment(Chunk.ALIGN_CENTER);
@@ -472,7 +472,7 @@ public class frm_Factura extends javax.swing.JFrame {
                         parrafo.setAlignment(Paragraph.ALIGN_LEFT);
                         parrafo.setFont(FontFactory.getFont("Tahoma", 18, Font.BOLD, BaseColor.DARK_GRAY));
                         parrafo.add("Nombre: " + factura.getNombre().concat("                " + "Ciudad: " + factura.getCiudad()) + "\n \n");
-                        parrafo.add("Ruc: " + factura.getRuc().concat("                            " + "Correo: " + factura.getCorreo()) + " \n \n");
+                        parrafo.add("RFC: " + factura.getRuc().concat("                            " + "Correo: " + factura.getCorreo()) + " \n \n");
                         parrafo.add("Telefono: " + factura.getTelefono().concat("                      " + "Fecha: " + factura.getFecha()) + "\n \n");
                         doc.open();
                         doc.add(header);

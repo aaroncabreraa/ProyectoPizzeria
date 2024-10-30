@@ -87,8 +87,8 @@ public class frm_EmpleadosBuscDesc extends javax.swing.JFrame {
             JasperReport reporte = null;
             String path = "src/Reportes/Meseros.jasper";
 
-            /*reporte = (JasperReport) JRLoader.loadObjectFromFile(path);*/
-            reporte = (JasperReport) JRLoader.loadObject(path);
+            reporte = (JasperReport) JRLoader.loadObjectFromFile(path);
+            //reporte = (JasperReport) JRLoader.loadObject(path);
             //llenado del reporte 
             JasperPrint jprint = JasperFillManager.fillReport(reporte, null, conn);
             //vista del reporte

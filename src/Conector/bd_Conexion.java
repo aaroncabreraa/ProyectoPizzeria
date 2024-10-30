@@ -39,7 +39,7 @@ public class bd_Conexion {
             pst.setString(5, usua.getTelefono());
             pst.setString(6, usua.getNombre());
 
-            int n = pst.executeUpdate();//de esto depende si e completo completamente
+            int n = pst.executeUpdate();//de esto depende si se completo correctamente
             if (n != 0) {
                 return true;
             } else {
@@ -88,7 +88,7 @@ public class bd_Conexion {
             pst.setString(4, adm.getContrasenaUsuario());
             pst.setString(5, adm.getUsernameUsuario());
 
-            int n = pst.executeUpdate();//de esto depende si e completo completamente
+            int n = pst.executeUpdate();//de esto depende si se completo correctamente
             if (n != 0) {
                 return true;
             } else {
@@ -112,7 +112,7 @@ public class bd_Conexion {
             pst.setString(4, mes.getContrasenaUsuario());
             pst.setString(5, mes.getUsernameUsuario());
             pst.setInt(6, mes.getNumeroDeMesero());
-            int n = pst.executeUpdate();//de esto depende si e completo completamente
+            int n = pst.executeUpdate();//de esto depende si esta completo
             if (n != 0) {
                 return true;
             } else {
@@ -139,7 +139,7 @@ public class bd_Conexion {
             pst.setDouble(7, bo.getIgv());
             pst.setDouble(8, bo.getMontoTotal());///aqui va el subtotal
 
-            int n = pst.executeUpdate();//de esto depende si e completo completamente
+            int n = pst.executeUpdate();//de esto depende si esta completo
             if (n != 0) {
                 return true;
             } else {
@@ -165,7 +165,7 @@ public class bd_Conexion {
             pst.setString(7, fac.getTelefono());
             pst.setDouble(8, fac.getSubtotal());//aqui va el subtotal
             pst.setString(9, fac.getAtendidoPor());///aqui va el atendidoP
-            int n = pst.executeUpdate();//de esto depende si e completo completamente
+            int n = pst.executeUpdate();//de esto depende si esta completo
             if (n != 0) {
                 return true;
             } else {
@@ -188,7 +188,7 @@ public class bd_Conexion {
             pst.setDouble(3, plat.getPrecio());
             pst.setDouble(4, plat.getMonto());
 
-            int n = pst.executeUpdate();//de esto depende si e completo completamente
+            int n = pst.executeUpdate();//de esto depende si esta completo
             if (n != 0) {
                 return true;
             } else {
@@ -211,7 +211,7 @@ public class bd_Conexion {
             pst.setDouble(3, bebid.getPrecio());
             pst.setDouble(4, bebid.getMonto());
 
-            int n = pst.executeUpdate();//de esto depende si e completo completamente
+            int n = pst.executeUpdate();//de esto depende si esta completo
             if (n != 0) {
                 return true;
             } else {
@@ -233,7 +233,7 @@ public class bd_Conexion {
             pst.setDouble(4, cart.getMonto());
             pst.setInt(5, cart.getNumerocarta());
 
-            int n = pst.executeUpdate();//de esto depende si e completo completamente
+            int n = pst.executeUpdate();//de esto depende si esta completo
             if (n != 0) {
                 return true;
             } else {
@@ -295,7 +295,7 @@ public class bd_Conexion {
         try {
             PreparedStatement pst = co.prepareStatement(cadena);
 
-            int n = pst.executeUpdate();//de esto depende si e completo completamente
+            int n = pst.executeUpdate();//de esto depende si ser completo correctamente
             if (n != 0) {
                 return true;
             } else {
