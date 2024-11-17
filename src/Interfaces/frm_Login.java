@@ -58,17 +58,21 @@ public class frm_Login extends javax.swing.JFrame {
         txt_password = new javax.swing.JPasswordField();
         txt_user = new javax.swing.JTextField();
         jButton2 = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
         jButton_Acceder = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setIconImage(getIconImage());
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Contraseña");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 260, -1, -1));
 
         jLabel2.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Usuario");
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 170, -1, -1));
         getContentPane().add(txt_password, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 300, 230, 40));
@@ -90,6 +94,11 @@ public class frm_Login extends javax.swing.JFrame {
         });
         getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 380, 160, 50));
 
+        jLabel4.setFont(new java.awt.Font("DejaVu Math TeX Gyre", 1, 36)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 234, 182));
+        jLabel4.setText("INICIO DE SESIÓN");
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 30, 380, 60));
+
         jButton_Acceder.setText("ACCEDER");
         jButton_Acceder.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
@@ -105,6 +114,11 @@ public class frm_Login extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton_Acceder, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 380, 160, 50));
+
+        jLabel3.setBackground(new java.awt.Color(255, 102, 51));
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/FondoDeHome.jpeg"))); // NOI18N
+        jLabel3.setText("jLabel3");
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 620, 510));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -221,6 +235,8 @@ public class frm_Login extends javax.swing.JFrame {
     private javax.swing.JButton jButton_Acceder;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JPasswordField txt_password;
     private javax.swing.JTextField txt_user;
     // End of variables declaration//GEN-END:variables
